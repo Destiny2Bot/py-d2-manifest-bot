@@ -29,7 +29,7 @@ jobs:
       - run: poetry env list
       
       - name: Check for manifest update
-        run: python check_for_manifest.py
+        run: poetry run python check_for_manifest.py
         env:
           API_KEY: ${{ secrets.API_KEY }}
           LOG_LEVEL: "INFO"
