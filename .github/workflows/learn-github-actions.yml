@@ -13,3 +13,13 @@ jobs:
           python-version: '3.9'
           
       - run: python --version
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      
+#       - name: Check for manifest update
+#         run: python manifest:check
+#         env:
+#           API_KEY: ${{ secrets.API_KEY }}
