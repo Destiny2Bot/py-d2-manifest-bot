@@ -29,8 +29,7 @@ async def getManifestOnline() -> dict:
 
 async def main():
     manifest = await getManifestOnline()
-    print(manifest["version"])
-    print(os.environ.get("LOG_LEVEL"), type(os.environ.get("LOG_LEVEL")))
+    print("Manifest version: ", manifest["version"])
 
 
 if __name__ == "__main__":
