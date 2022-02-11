@@ -120,6 +120,6 @@ poetry.lock
 data/BungieManifest/*
 *.DS_Store
 fytest
-.vscode/launch.json
+.vscode/*
 .env
 test/*

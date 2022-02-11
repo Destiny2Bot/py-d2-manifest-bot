@@ -34,7 +34,7 @@
     },
     "files.exclude": {
         "**/__pycache__": true,
-        ".venv": true,
+        ".venv": false,
         ".mypy_cache": true,
         "poetry.lock": true,
         "LICENSE": true,
