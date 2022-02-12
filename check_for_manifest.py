@@ -57,17 +57,19 @@ async def startGenerateManifest(current: str) -> None:
 
 
 async def main():
+    skipCheck = True if os.environ.get("SKIP_CHECK", "") == "true" else False
     latest = readFile("./latest.json")
     manifestMetadata = await getManifestOnline()
     current = manifestMetadata["version"]
     newREADME = "# py-d2-manifest-bot\ngithub action for checking for new d2 manifest\n\n# Current Manifest: {current}"
-    print(f"Latest: {latest}")
-    print(f"Current: {current}")
-    if latest == current:
-        return
-    print("New manifest detected")
-    writeFile("latest.json", current)
-    writeFile("README.md", newREADME.format(current=current))
+    if not skipCheck:
+        print(f"Latest: {latest}")
+        print(f"Current: {current}")
+        if latest == current:
+            return
+        print("New manifest detected")
+        writeFile("latest.json", current)
+        writeFile("README.md", newREADME.format(current=current))
     await startGenerateManifest(current)
 
 
