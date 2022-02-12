@@ -123,3 +123,4 @@ fytest
 .vscode/*
 .env
 test/*
+workspace.code-workspace

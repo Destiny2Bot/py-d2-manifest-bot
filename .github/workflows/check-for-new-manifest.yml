@@ -38,6 +38,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4.7.2
         with:
           commit_message: new manifest version
-          commit_user_name: Tian-que
-          commit_user_email: 1605206150@qq.com
-          commit_author: Tian-que <1605206150@qq.com>
+          commit_user_name: D2 Manifest Bot
+          commit_user_email: 1605206150tq@gmail.com
+          commit_author: D2 Manifest Bot <1605206150tq@gmail.com>
